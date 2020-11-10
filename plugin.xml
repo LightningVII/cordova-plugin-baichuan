@@ -1,18 +1,29 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.enet6688.alibc" version="0.0.1"
-    xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>AliBC</name>
-    <js-module name="AliBC" src="www/AliBC.js">
-        <clobbers target="cordova.plugins.AliBC" />
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-baichuan" version="0.2.3">
+    <name>Baichuan</name>
+    <description>Cordova Baichuan Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,baichuan</keywords>
+    <js-module src="www/baichuan.js" name="baichuan">
+        <clobbers target="baichuan" />
     </js-module>
     <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="AliBC">
-                <param name="android-package" value="com.enet6688.alibc.AliBC" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Baichuan">
+                <param name="android-package" value="CDVBaichuan" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
-        <source-file src="src/android/AliBC.java" target-dir="src/com/enet6688/alibc/AliBC" />
+        <source-file src="src/android/Baichuan.java" target-dir="src/com/ace/alibc/Baichuan" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Baichuan">
+                <param name="ios-package" value="CDVBaichuan"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/CDVBaichuan.h" />
+        <source-file src="src/ios/CDVBaichuan.m" />
     </platform>
 </plugin>
