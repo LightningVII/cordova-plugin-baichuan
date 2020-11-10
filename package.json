@@ -1,12 +1,27 @@
 {
-  "name": "AliBC",
-  "version": "1.0.0",
+  "name": "Baichuan",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "author": "White Ace <whiteace@sina.com>",
+  "license": "Apache 2.0",
+  "description": "Cordova Baichuan Plugin",
+  "cordova": {
+    "id": "cordova-plugin-baichuan",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LightningVII/cordova-plugin-baichuan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LightningVII/cordova-plugin-baichuan/issues"
+  },
+  "homepage": "https://github.com/LightningVII/cordova-plugin-baichuan#readme"
 }
